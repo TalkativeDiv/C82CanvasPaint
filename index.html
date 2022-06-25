@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing App</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="body_backgorund bg-slate-900">
+    <div class="flex justify-center items-center flex-col">
+      <br />
+      <h1 class="text-4xl text-slate-400 font-bold">Paint</h1>
+      <br />
+      <canvas
+        id="myCanvas"
+        class="border-8 border-slate-600 rounded bg-slate-50"
+        width="800"
+        height="600"
+      ></canvas>
+      <br /><br />
+      <div class="flex justify-center items-center gap-4">
+        <div>
+          <label
+            for="txtColor"
+            class="block mb-2 text-sm font-medium text-slate-400"
+            >Color</label
+          >
+          <input
+            type="text"
+            id="txtColor"
+            class="bg-gray-50 transition border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="red"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="txtWidth"
+            class="block mb-2 text-sm font-medium text-slate-400"
+            >Width</label
+          >
+          <input
+            type="text"
+            id="txtWidth"
+            class="bg-gray-50 transition border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="50"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <button
+        onclick="ctx.clearRect(0, 0, cvs.width, cvs.height);"
+        type="button"
+        class="text-white transition bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+      >
+        Clear Canvas
+      </button>
+
+      <!--Additional activity -->
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
